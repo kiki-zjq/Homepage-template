@@ -2,18 +2,35 @@
   <div id="app">
     <HeaderPart id="header-part"/>
     <IntroPart id="intro"/>
-    <div id='main-part'>
-        <router-view />
+    <!-- <div id='main-part'>
+        <div class="Menu">
+          <Menu />
+        </div>
+        <div class="View">
+          <router-view />
+        </div>
+    </div>
+
+    <FooterPart class='footer'/> -->
+     
+    <div class="Wrapper">
+      <div class='Menu'>
+        <Menu  />
+      </div>
+      <div class="View">
+        <router-view/>
+      </div>
     </div>
 
     <FooterPart class='footer'/>
-     
+
   </div>
 </template>
 
 <script>
 import HeaderPart from '@/layout/header'
 import FooterPart from '@/layout/footer'
+import Menu from '@/layout/menu'
 import IntroPart from '@/components/intro.vue'
 export default {
   name: 'App',
@@ -27,7 +44,8 @@ export default {
   components:{
     FooterPart,
     HeaderPart,
-    IntroPart
+    IntroPart,
+    Menu
   },
 };
 
@@ -128,5 +146,42 @@ body{
 }
 
 
+.footer{
+  margin-top:100px;
+  min-width: 1250px;
+}
+
+
+.Wrapper{
+  min-height:800px;
+  min-width: 1250px;
+  width:100%;
+}
+
+.Wrapper:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.Menu{
+  width:25%;
+  padding-left:10%;
+  padding-top: 5vh;
+  min-width: 400px;
+  box-sizing: border-box;
+  float:left;
+  position: sticky;
+  top:5vh;
+}
+
+.View{
+  float:left;
+  width:65%;
+  margin-top:1%;
+  margin-left:4%;
+}
 
 </style>
