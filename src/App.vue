@@ -33,43 +33,57 @@ export default {
 
 let flag = 0;
 let fadeFlag = 0;
+// $(function(){
+//             var oTop1 = $(document).scrollTop(); 
 
-$(window).scroll( function() {
+//             $(window).scroll(function(){
+//                 var oTop2 = $(document).scrollTop(); 
+//                 if(oTop2 > oTop1){
+//                    $("#header-part").removeClass("fix opacity-nav");
+//                 }else {
+                      
+//                        $("#header-part").addClass("fix opacity-nav");
+//                 }
+//                 oTop1 = $(document).scrollTop();
+//                 console.log(oTop1)
+//               });
+//         });
+// $(window).scroll( function() {
         
-        if(document.documentElement.scrollTop>=460){
-            $("#header-part").addClass("fix");
-            if(flag == 0){
-              console.log("flag:",flag)
-              $("#header-part").fadeOut()
-              flag = 1
-            }
+//         if(document.documentElement.scrollTop>=460){
+//             $("#header-part").addClass("fix");
+//             if(flag == 0){
+//               console.log("flag:",flag)
+//               $("#header-part").fadeOut()
+//               flag = 1
+//             }
             
-          }
-        else{
-            $("#header-part").removeClass("fix");
-            $("#header-part").removeClass("opacity-nav");
-            flag = 0
-            fadeFlag = 1;
-        }
+//           }
+//         else{
+//             $("#header-part").removeClass("fix");
+//             $("#header-part").removeClass("opacity-nav");
+//             flag = 0
+//             fadeFlag = 1;
+//         }
 
 
-    } );
+//     } );
   
-  window.addEventListener('mousewheel',function(e){
-      if(e.wheelDelta>0 && document.documentElement.scrollTop>=460 && fadeFlag == 0){ // wheelDelta>0说明鼠标向上滚动
-        $("#header-part").addClass("opacity-nav");
-        console.log(e.wheelDelta)
-        $("#header-part").fadeIn(1000,function(){
-            fadeFlag = 1
-        })
-      }
-      if(e.wheelDelta<0 && document.documentElement.scrollTop>=460 && fadeFlag == 1){ // wheelDelta>0说明鼠标向下滚动
-        $("#header-part").fadeOut(1000,function(){
-          $("#header-part").removeClass("opacity-nav");
-          fadeFlag = 0;
-        })
-      }
-  })
+//   window.addEventListener('mousewheel',function(e){
+//       if(e.wheelDelta>0 && document.documentElement.scrollTop>=460 && fadeFlag == 0){ // wheelDelta>0说明鼠标向上滚动
+//         $("#header-part").addClass("opacity-nav");
+//         console.log(e.wheelDelta)
+//         $("#header-part").fadeIn(1000,function(){
+//             fadeFlag = 1
+//         })
+//       }
+//       if(e.wheelDelta<0 && document.documentElement.scrollTop>=460 && fadeFlag == 1){ // wheelDelta>0说明鼠标向下滚动
+//         $("#header-part").fadeOut(1000,function(){
+//           $("#header-part").removeClass("opacity-nav");
+//           fadeFlag = 0;
+//         })
+//       }
+//   })
 
 </script>
 

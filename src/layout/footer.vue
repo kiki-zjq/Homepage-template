@@ -39,7 +39,7 @@
                 </div>
             <el-divider></el-divider>
             <div class="copyright">
-                <i class="fa fa-copyright fa-1x" aria-hidden="true"></i><span class='team-name'>SCAN-ATAC GPU Simulator</span>
+                <i class="fa fa-copyright fa-1x" aria-hidden="true"></i><span class='team-name'>KiKi-Zjq</span>
             </div>
     </div>
 </template>

@@ -31,11 +31,15 @@
 
             </el-col>   
         </el-row> -->
+        <!-- <i class="fa fa-language" aria-hidden="true"></i> -->
         <ul class="nav">
-            <li><a href='javascript:void(0)' @click="handleClick(1)">Home</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(2)">Download</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(3)">Document</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(4)">Example</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(1)">Homepage</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(2)">Resume</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(3)">Experience</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(4)">Project</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(5)">Certification</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(6)">Blogs</a></li>
+            <li><i class="fa fa-language" aria-hidden="true"></i></li>
             <!-- <li @click="handleClick(1)">Home</li>
             <li @click="handleClick(2)">Download</li>
             <li @click="handleClick(3)">Document</li>
@@ -74,20 +78,28 @@ export default {
         console.log("!route:",this.$route)
         switch(this.$route.path){
                 case '/':
-                    this.$store.commit('changePage','Homepage');
-                    this.$store.commit('changeIntro','It is an introduction/sub-title for homepage');
+                    this.$store.commit('changePage','KiKi-Zjq');
+                    this.$store.commit('changeIntro','Personal Homepage');
                     break;
-                case '/Download':
-                    this.$store.commit('changePage','Download');
+                case '/Resume':
+                    this.$store.commit('changePage','Resume');
                     this.$store.commit('changeIntro','It is an introduction/sub-title for download');
                     break;
-                case '/Document':
-                    this.$store.commit('changePage','Document');
+                case '/Experience':
+                    this.$store.commit('changePage','Experience');
                     this.$store.commit('changeIntro','It is an introduction/sub-title for document');
                     break;
-                case '/Example':
-                    this.$store.commit('changePage','Example');
+                case '/Project':
+                    this.$store.commit('changePage','Project');
                     this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                    break;
+                case '/Certification':
+                    this.$store.commit('changePage','Certification');
+                    this.$store.commit('changeIntro','It is an introduction/sub-title for download');
+                    break;
+                case '/Blogs':
+                    this.$store.commit('changePage','Blogs');
+                    this.$store.commit('changeIntro','It is an introduction/sub-title for document');
                     break;
             }
     },
@@ -97,22 +109,32 @@ export default {
           switch(value){
               case 1:
                   this.$router.push('./#app');
-                  this.$store.commit('changePage','Homepage');
-                  this.$store.commit('changeIntro','It is an introduction/sub-title for homepage');
+                  this.$store.commit('changePage','KiKi-Zjq');
+                  this.$store.commit('changeIntro','Personal Homepage');
                   break;
               case 2:
-                  this.$router.push('./Download#app');
-                  this.$store.commit('changePage','Download');
+                  this.$router.push('./Resume#app');
+                  this.$store.commit('changePage','Resume');
                   this.$store.commit('changeIntro','It is an introduction/sub-title for download');
                   break;
               case 3:
-                  this.$router.push('./Document#app');
-                  this.$store.commit('changePage','Document');
+                  this.$router.push('./Experience#app');
+                  this.$store.commit('changePage','Experience');
                   this.$store.commit('changeIntro','It is an introduction/sub-title for document');
                   break;
               case 4:
-                  this.$router.push('./Example#app');
-                  this.$store.commit('changePage','Example');
+                  this.$router.push('./Project#app');
+                  this.$store.commit('changePage','Project');
+                  this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                  break;
+              case 5:
+                  this.$router.push('./Certification#app');
+                  this.$store.commit('changePage','Certification');
+                  this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                  break;
+              case 6:
+                  this.$router.push('./Blogs#app');
+                  this.$store.commit('changePage','Blogs');
                   this.$store.commit('changeIntro','It is an introduction/sub-title for example');
                   break;
           }
@@ -130,6 +152,11 @@ export default {
     position: relative;
     background-color:#404040;
 }
+.fa{
+    margin-left:10px;
+    margin-top:5px;
+    font-size:24px;
+}
 .nav{
     position:absolute;
     right:100px;
@@ -138,12 +165,10 @@ export default {
 .nav li{
     float:left;
 }
-.nav li:first-child{
-    border-left:2px white solid;
-}
+
 .nav li a{
     display: block;
-    border-right:2px white solid;
+    
     /* border-left:1px white solid; */
     
     text-decoration: none;

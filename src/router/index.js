@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Homepage from '@/view/homepage/index.vue'
-import Download from '@/view/download/index.vue'
-import Document from '@/view/document/index.vue'
-import Example from '@/view/example/index.vue'
-
-
+import Resume from '@/view/resume/index.vue'
+import Experience from '@/view/experience/index.vue'
+import Project from '@/view/project/index.vue'
+import Certification from '@/view/Certification/index.vue'
+import Blogs from '@/view/blogs/index.vue'
 
 
 Vue.use(Router)
@@ -18,20 +18,31 @@ export default new Router({
       component: Homepage
     },
     {
-      path: '/Download',
-      name: 'Download',
-      component: Download
+      path: '/Resume',
+      name: 'Resume',
+      component: Resume
     },
     {
-      path: '/Document',
-      name: 'Document',
-      component: Document
+      path: '/Experience',
+      name: 'Experience',
+      component: Experience
     },
     {
-      path: '/Example',
-      name: 'Example',
-      component: Example
+      path: '/Project',
+      name: 'Project',
+      component: Project
     },
+    {
+      path: '/Certification',
+      name: 'Certification',
+      component: Certification
+    },
+    {
+      path: '/Blogs',
+      name: 'Blogs',
+      component: Blogs
+    },
+
   ],
 
 
