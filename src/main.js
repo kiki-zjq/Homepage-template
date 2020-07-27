@@ -26,7 +26,14 @@ const store = new Vuex.Store({
         },
         changeIntro(state,intro){
             state.Intro= intro
-        }
+        },
+        changeLanguage(state){
+          if(state.language == 'Chinese'){
+              state.language = 'English'
+          }else{
+              state.language = 'Chinese'
+          }
+      }
       },
   getters: {},
   actions: {},

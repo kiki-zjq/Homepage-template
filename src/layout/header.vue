@@ -33,47 +33,30 @@
         </el-row> -->
         <!-- <i class="fa fa-language" aria-hidden="true"></i> -->
         <ul class="nav">
-            <li><a href='javascript:void(0)' @click="handleClick(1)">Homepage</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(2)">Resume</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(3)">Experience</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(4)">Project</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(5)">Certification</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(6)">Blogs</a></li>
-            <li><i class="fa fa-language" aria-hidden="true"></i></li>
-            <!-- <li @click="handleClick(1)">Home</li>
-            <li @click="handleClick(2)">Download</li>
-            <li @click="handleClick(3)">Document</li>
-            <li @click="handleClick(4)">Example</li> -->
+            <li><a href='javascript:void(0)' @click="handleClick(1)">{{language=='Chinese'?'主页':'Homepage'}}</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(2)">{{language=='Chinese'?'简历':'Resume'}}</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(3)">{{language=='Chinese'?'经历':'Experience'}}</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(4)">{{language=='Chinese'?'项目':'Project'}}</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(5)">{{language=='Chinese'?'证书':'Certification'}}</a></li>
+            <li><a href='javascript:void(0)' @click="handleClick(6)">{{language=='Chinese'?'博客':'Blogs'}}</a></li>
+            <li><i class="fa fa-language" aria-hidden="true" @click='handleChangeLanguage()'></i></li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
+    props:{
+        language:{
+            type:String,
+            default:'Chinese',
+        }
+    },
     data(){
         return{
             active:'1'
         }
     },
-    // watch:{
-    //     $route(to,from){
-    //         console.log("!:",to.path)
-    //         switch(to.path){
-    //             case '/':
-    //                 this.$store.commit('changePage','Homepage','It is an introduction/sub-title');
-    //                 break;
-    //             case '/Download':
-    //                 this.$store.commit('changePage','Download','It is an introduction/sub-title');
-    //                 break;
-    //             case '/Document':
-    //                 this.$store.commit('changePage','Document','It is an introduction/sub-title');
-    //                 break;
-    //             case '/Example':
-    //                 this.$store.commit('changePage','Example','It is an introduction/sub-title');
-    //                 break;
-    //         }
-    //     }
-    // },
     mounted(){
         console.log("!route:",this.$route)
         switch(this.$route.path){
@@ -104,6 +87,12 @@ export default {
             }
     },
     methods: {
+        
+        handleChangeLanguage(){
+            this.$store.commit('changeLanguage')
+            this.$emit('changeLang')
+        },
+
       handleClick(value){
           console.log(value)
           switch(value){
@@ -151,11 +140,13 @@ export default {
     z-index:9;
     position: relative;
     background-color:#404040;
+    min-width:1400px;
 }
 .fa{
     margin-left:10px;
     margin-top:5px;
     font-size:24px;
+    cursor:pointer;
 }
 .nav{
     position:absolute;

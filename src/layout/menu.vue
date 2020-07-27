@@ -60,7 +60,9 @@ export default {
 </script>
 
 <style >
-
+.Menu-block{
+    text-align: left;
+}
 ul.el-menu-vertical-demo.main-menu.el-menu{
     text-align: left;
     padding-left:5%;
@@ -68,7 +70,6 @@ ul.el-menu-vertical-demo.main-menu.el-menu{
     font-weight:bold;
     border-color:"#fafafa";
     border-radius:20px;
-    text-align: left;
     background-color:"#fafafa";
     
 }

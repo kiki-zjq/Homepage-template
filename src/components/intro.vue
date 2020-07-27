@@ -36,6 +36,7 @@ export default {
        
         position:relative;
         width:100%;
+        min-width: 1400px;
         height:460px;
         background-color: #404040;
         text-align: center;
