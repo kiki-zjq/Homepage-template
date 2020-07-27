@@ -1,19 +1,21 @@
 <template>
     <div>
-        <div class='container'>
+        <div class='img-container'>
                             <el-image 
+                                :fit="fit"
+                                style='height:330px'
                                 :src="src" 
                                 :preview-src-list="srcList"
                                 lazy>
                             </el-image>
-                            <div class='footer'>
+                            <div class='img-footer'>
                                 <p class="project-title">
                                     <span class="code">&lt;</span>
                                     {{projectName}}
                                     <span class="code">&#47;&gt;</span>
-                                    <a  :href="href" target='_blank'>
+                                    <!-- <a  :href="href" target='_blank'>
                                         <i class="el-icon-more"></i>
-                                    </a>
+                                    </a> -->
                                 </p>
                             </div>
         </div>
@@ -23,6 +25,11 @@
 
 <script>
 export default {
+    data(){
+        return{
+            fit:'cover'
+        }
+    },
     props:{
         src:{
             type:String,
@@ -46,11 +53,11 @@ export default {
 
 
 <style scoped>
-    .container{
+    .img-container{
         padding:10px;
         background:#303841;
     }
-    .footer{
+    .img-container .img-footer{
         width:100%;
         height:40px;
         background: #303841;
@@ -58,17 +65,17 @@ export default {
         font-size:20px;
         line-height:20px;
     }
-    .code{
+    .img-container .code{
         color:#303841;
         transition: color 0.3s ease-out;
     }
-    .footer:hover .code {
+    .img-container .img-footer:hover .code {
         color: #ff7f50;
     }
-    .project-title{
+    .img-container .project-title{
         color:white;
     }
-    .project-title a{
+    .img-container .project-title a{
         color:white;
         float:right;
         margin-right:10px;

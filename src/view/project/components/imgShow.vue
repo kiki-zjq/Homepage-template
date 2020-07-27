@@ -6,7 +6,7 @@
                                 :preview-src-list="srcList"
                                 lazy>
                             </el-image>
-                            <div class='footer'>
+                            <div class='footer-name'>
                                 <p class="project-title">
                                     <span class="code">&lt;</span>
                                     {{projectName}}
@@ -16,6 +16,16 @@
                                     </a>
                                 </p>
                             </div>
+                            <!-- <div class='footer'>
+                                <p class="project-title">
+                                    <span class="code">&lt;</span>
+                                    {{projectName}}
+                                    <span class="code">&#47;&gt;</span>
+                                    <a  :href="href" target='_blank'>
+                                        <i class="el-icon-more"></i>
+                                    </a>
+                                </p>
+                            </div> -->
         </div>
     </div>
 </template>
@@ -47,22 +57,21 @@ export default {
 
 <style scoped>
     .container{
+        position: relative;
         padding:10px;
         background:#303841;
     }
-    .footer{
-        width:100%;
-        height:40px;
-        background: #303841;
+    .footer-name{
         text-align:center;
         font-size:20px;
         line-height:20px;
     }
+
     .code{
         color:#303841;
         transition: color 0.3s ease-out;
     }
-    .footer:hover .code {
+    .footer-name:hover .code {
         color: #ff7f50;
     }
     .project-title{
