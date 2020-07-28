@@ -15,11 +15,26 @@
             <img v-if='language=="English"' src="./English_1.jpg" width='800px' />
             <img v-if='language=="English"' src="./English_2.jpg" width='800px' style='margin-top:-100px;'/>
         </div>
+
+        <el-divider></el-divider>
+         <div class='sub-title'>
+            本科成绩单
+        </div>
+        <p style="margin-left:2em;color:gray"><i>(Click <b>Semester</b> or <b>Keywords</b> to filter this table)</i></p>
+        <div class="table" style="margin:5px auto;width:95%;">
+           <List />
+        </div>
+
+
     </div>
 </template>
 
 <script>
+import List from './components/List';
 export default {
+    components:{
+      List
+    },
      data(){
       return{
           
@@ -33,7 +48,7 @@ export default {
 }
 
 $(window).scroll( function() {
-        if(document.documentElement.scrollTop<=130){
+        if(document.documentElement.scrollTop<=130||document.documentElement.scrollTop>=1000){
             $(".downloader").fadeOut(500);
            //console.log(document.documentElement.scrollTop);
         }

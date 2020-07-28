@@ -22,81 +22,14 @@
             <RectTreeChart class='rect-tree-chart'/>
 
         <el-divider></el-divider>
+
         <!-------------------------------------------------------------------------------------->
         <div class='sub-title'>
-            Function Details
+            本科成绩单
         </div>
-
-        <div class='code-block'>
-            <span class="function-name">_runif_to_one_by(param)</span>
-            <span class="function-description">-- This is a function used to calculate the key value for each item in the population.</span>
-            <br />
-            <p><span>@param param: </span>Float number to indicate the weight of the item</p>
-            <p><span>@return Float Number indicate the key value of the item</span></p>
-        </div>
-
-        <div class='code-block'>
-            <span class="function-name">_runif_to_one_by(param)</span>
-            <span class="function-description">-- This is a function used to calculate the key value for each item in the population.</span>
-            <br />
-            <p><span>@param param: </span>Float number to indicate the weight of the item</p>
-            <p><span>@return Float Number indicate the key value of the item</span></p>
-        </div>
-
-        <div class='code-block'>
-            <span class="function-name">_runif_to_one_by(param)</span>
-            <span class="function-description">-- This is a function used to calculate the key value for each item in the population.</span>
-            <br />
-            <p><span>@param param: </span>Float number to indicate the weight of the item</p>
-            <p><span>@return Float Number indicate the key value of the item</span></p>
-        </div>
-
-        <div class='code-block'>
-            <span class="function-name">_runif_to_one_by(param)</span>
-            <span class="function-description">-- This is a function used to calculate the key value for each item in the population.</span>
-            <br />
-            <p><span>@param param: </span>Float number to indicate the weight of the item</p>
-            <p><span>@return Float Number indicate the key value of the item</span></p>
-        </div>
-
-        <div class='code-block'>
-            <span class="function-name">_runif_to_one_by(param)</span>
-            <span class="function-description">-- This is a function used to calculate the key value for each item in the population.</span>
-            <br />
-            <p><span>@param param: </span>Float number to indicate the weight of the item</p>
-            <p><span>@return Float Number indicate the key value of the item</span></p>
-        </div>
-
-        <el-divider></el-divider>
-        <!-------------------------------------------------------------------------------------->
-        <div class='sub-title'>
-            Experimental Results
-        </div>
-        <div class="table" style="margin:10px auto;width:90%;">
-            <el-table
-                :data="tableData"
-                stripe
-                style="width: 100%">
-                <el-table-column
-                prop="core"
-                label="Number of cores"
-                width="230">
-                </el-table-column>
-                <el-table-column
-                prop="total"
-                label="Total number"
-                width="230">
-                </el-table-column>
-                <el-table-column
-                prop="sample"
-                label="Sampling size"
-                width="280">
-                </el-table-column>
-                <el-table-column
-                prop="time"
-                label="time(s)">
-                </el-table-column>
-            </el-table>
+        <p style="margin-left:2em;color:gray"><i>(Click <b>Semester</b> or <b>Keywords</b> to filter this table)</i></p>
+        <div class="table" style="margin:5px auto;width:95%;">
+           <List />
         </div>
 
     </div>    
@@ -104,32 +37,15 @@
 
 <script>
 import RectTreeChart from './components/RectTreeChart';
+import List from './components/List';
 export default {
     components:{
       RectTreeChart,
+      List
     },
     data() {
       return {
-        tableData: [
-            {
-                core: '1',
-                total: '10k',
-                sample: '2k',
-                time:'36132',
-            },
-            {
-                core: '4',
-                total: '10k',
-                sample: '2k',
-                time:'9065',
-            },
-            {
-                core: '8',
-                total: '10k',
-                sample: '2k',
-                time:'4728',
-            }
-        ]
+
       }
     }
   }
