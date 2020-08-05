@@ -18,7 +18,7 @@ const store = new Vuex.Store({
   state:{
       language:'Chinese',
       Page:'Homepage',
-      Intro:'this is a sub-title',
+      Intro:'',
     },
   mutations:{
         changePage(state,page){

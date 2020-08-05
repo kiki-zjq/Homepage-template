@@ -1,45 +1,45 @@
 <template>
 
 <div class='Menu-block'>
-        <!-- <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-          <el-radio-button :label="false">展开</el-radio-button>
-          <el-radio-button :label="true">收起</el-radio-button>
-        </el-radio-group> -->
+
        <el-menu
-      default-active="2"
+      :default-active="active"
       class="el-menu-vertical-demo"
       @open="handleOpen"
-      @close="handleClose">
+      @close="handleClose"
+      active-text-color="#ff4f4f">
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>导航一</span>
+          <span>{{language=='Chinese'?'首页':'HOMEPAGE'}}</span>
         </template>
         <el-menu-item-group>
-          <template slot="title">分组一</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
+          <el-menu-item index="1-1" @click='handleClick(1.1)'>{{language=='Chinese'?'关于作者':'About'}}</el-menu-item>
+          <el-menu-item index="1-2" @click='handleClick(1.2)'>{{language=='Chinese'?'相关技术栈':'Skill'}}</el-menu-item>
+          <el-menu-item index="1-3" @click='handleClick(1.3)'>{{language=='Chinese'?'本科成绩单':'Academic'}}</el-menu-item> 
         </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
+
+      <el-menu-item index="2" @click='handleClick(2)'>
         <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
+        <span slot="title" >{{language=='Chinese'?'简历':'RESUME'}}</span>
       </el-menu-item>
-      <el-menu-item index="3" disabled>
+
+      <el-menu-item index="3" @click='handleClick(3)'>
         <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
+        <span slot="title">{{language=='Chinese'?'经历':'EXPERIENCE'}}</span>
       </el-menu-item>
-      <el-menu-item index="4">
+
+      <el-menu-item index="4" @click='handleClick(4)'>
         <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
+        <span slot="title">{{language=='Chinese'?'项目':'PROJECT'}}</span>
       </el-menu-item>
+
+      <el-menu-item index="5" @click='handleClick(5)'>
+        <i class="el-icon-setting"></i>
+        <span slot="title">{{language=='Chinese'?'证书':'CERTIFICATION'}}</span>
+      </el-menu-item>
+
     </el-menu>
 
 
@@ -47,13 +47,109 @@
 </template>
 
 <script>
+let active='1'
 export default {
+    props:{
+        language:{
+            type:String,
+            default:'Chinese',
+        }
+    },
+    data(){
+      return{
+        active
+      }
+    },
+
+    mounted(){
+      console.log(this.$route)
+    switch(this.$route.path){
+      case '/Resume':this.active='2';break;
+      case '/Experience':this.active='3';break;
+      case '/Project':this.active='4';break;
+      case '/Certification':this.active='5';break;
+      default:
+        this.active='1';
+    }
+    if(this.$route.path=='/'){
+          switch(this.$route.hash){
+            case '#skill':this.active='1-2';return;
+            case '#academic':this.active = '1-3';return;
+            case '#anchor':this.active = '1-1';return;
+            default:this.active = '1-1';
+          }
+        }
+  },
+
+    watch:{
+      $route(to,from){
+        switch(to.path){
+        case '/Resume':
+          this.active='2';return;
+        case '/Experience':
+          this.active='3';return;
+        case '/Project':
+          this.active='4';return;
+        case '/Certification':
+          this.active='5';break;
+        }
+        if(to.path=='/'){
+          switch(to.hash){
+            case '#skill':this.active='1-2';return;
+            case '#academic':this.active = '1-3';return;
+            case '#anchor':this.active = '1-1';return;
+            default:this.active = '1-1';
+          }
+        }
+      }
+    },
+
     methods: {
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
+      },
+      handleClick(index){
+        switch(index){
+            case 1.1:
+              this.$router.push('/#anchor');
+              this.$store.commit('changePage','KiKi-Zjq');
+              this.$store.commit('changeIntro','Personal Homepage');
+              break;
+            case 1.2:
+              this.$router.push('/#skill');
+              this.$store.commit('changePage','KiKi-Zjq');
+              this.$store.commit('changeIntro','Personal Homepage');
+              break;
+            case 1.3:
+              this.$router.push('/#academic');
+              this.$store.commit('changePage','KiKi-Zjq');
+              this.$store.commit('changeIntro','Personal Homepage');
+              break;
+            case 2:
+              this.$router.push('/Resume#anchor');
+              this.$store.commit('changePage','Resume');
+              this.$store.commit('changeIntro','');
+              break;
+            case 3:
+              this.$router.push('/Experience#anchor');
+              this.$store.commit('changePage','Experience');
+              this.$store.commit('changeIntro','');
+              break;
+            case 4:
+              this.$router.push('/Project#anchor');
+              this.$store.commit('changePage','Project');
+              this.$store.commit('changeIntro','');
+              break;
+            case 5:
+              this.$router.push('/Certification#anchor');
+              this.$store.commit('changePage','Certification');
+              this.$store.commit('changeIntro','');
+              break;
+        }
+
       }
     }
   }
@@ -72,6 +168,9 @@ ul.el-menu-vertical-demo.main-menu.el-menu{
     border-radius:20px;
     background-color:"#fafafa";
     
+}
+.el-menu-vertical-demo{
+  font-weight:bold;
 }
 .el-submenu__icon-arrow{
   font-weight:bold;

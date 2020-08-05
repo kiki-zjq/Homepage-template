@@ -124,4 +124,9 @@ export default {
     .el-col{
         margin-bottom: 20px;
     }
+     .el-icon-circle-close:before {
+        content: "\E78D";
+        color: white;
+        font-weight: 1000;
+    }
 </style>

@@ -80,4 +80,9 @@ export default {
         float:right;
         margin-right:10px;
     }
+    .el-icon-circle-close:before {
+        content: "\E78D";
+        color: white!important;
+        font-weight: 1000;
+    }
 </style>

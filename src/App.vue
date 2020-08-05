@@ -13,9 +13,9 @@
 
     <FooterPart class='footer'/> -->
      
-    <div class="Wrapper">
+    <div class="Wrapper" id='anchor' name='anchor'>
       <div class='Menu'>
-        <Menu  />
+        <Menu  v-bind:language='language'/>
       </div>
       <div class="View">
         <router-view/>

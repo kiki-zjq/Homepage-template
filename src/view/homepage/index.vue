@@ -2,7 +2,7 @@
     <div class='document-block'>
         
         <div class='sub-title'>
-            作者介绍
+            {{language=='Chinese'?'关于作者':'About'}}
         </div>
         <div style="margin-left:2em;">
             <p>作者朱江奇，北京邮电大学2017级在读，电信工程及管理专业。目前专业排名第一 （1/326）</p>
@@ -15,8 +15,8 @@
         </div>
         <el-divider></el-divider>
         <!-------------------------------------------------------------------------------------->
-        <div class='sub-title'>
-            技术栈
+        <div class='sub-title' id='skill'>
+            {{language=='Chinese'?'相关技术栈':'Skill'}}
         </div>
 
             <RectTreeChart class='rect-tree-chart'/>
@@ -24,8 +24,8 @@
         <el-divider></el-divider>
 
         <!-------------------------------------------------------------------------------------->
-        <div class='sub-title'>
-            本科成绩单
+        <div class='sub-title' id='academic'>
+            {{language=='Chinese'?'本科成绩单':'Academic'}}
         </div>
         <p style="margin-left:2em;color:gray"><i>(Click <b>Semester</b> or <b>Keywords</b> to filter this table)</i></p>
         <div class="table" style="margin:5px auto;width:95%;">
@@ -46,6 +46,11 @@ export default {
     data() {
       return {
 
+      }
+    },
+    computed:{
+      language:function(){
+          return this.$store.state.language
       }
     }
   }

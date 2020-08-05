@@ -7,6 +7,9 @@
             <a v-if='language=="Chinese"' class='downloader' href='./static/data/Resume_ZhuJiangqi.pdf' download='Resume_ZhuJiangqi.pdf'>
                 <el-button type="warning" icon="el-icon-download" circle></el-button>
             </a>
+            <!-- <a v-if='language=="Chinese"' class='downloader' href='./static/data/SNIS-939.mp4' download='SNIS-939'>
+                <el-button type="warning" icon="el-icon-download" circle></el-button>
+            </a> -->
             <a v-if='language=="English"' class='downloader' href='./static/data/Resume_ZhuJiangqi_english.pdf' download='Resume_ZhuJiangqi.pdf'>
                 <el-button type="success" icon="el-icon-download" circle></el-button>
             </a>
@@ -16,14 +19,14 @@
             <img v-if='language=="English"' src="./English_2.jpg" width='800px' style='margin-top:-100px;'/>
         </div>
 
-        <el-divider></el-divider>
+        <!-- <el-divider></el-divider>
          <div class='sub-title'>
             本科成绩单
         </div>
         <p style="margin-left:2em;color:gray"><i>(Click <b>Semester</b> or <b>Keywords</b> to filter this table)</i></p>
         <div class="table" style="margin:5px auto;width:95%;">
            <List />
-        </div>
+        </div> -->
 
 
     </div>

@@ -38,7 +38,7 @@
             <li><a href='javascript:void(0)' @click="handleClick(3)">{{language=='Chinese'?'经历':'Experience'}}</a></li>
             <li><a href='javascript:void(0)' @click="handleClick(4)">{{language=='Chinese'?'项目':'Project'}}</a></li>
             <li><a href='javascript:void(0)' @click="handleClick(5)">{{language=='Chinese'?'证书':'Certification'}}</a></li>
-            <li><a href='javascript:void(0)' @click="handleClick(6)">{{language=='Chinese'?'博客':'Blogs'}}</a></li>
+            <!-- <li><a href='javascript:void(0)' @click="handleClick(6)">{{language=='Chinese'?'博客':'Blogs'}}</a></li> -->
             <li><i class="fa fa-language" aria-hidden="true" @click='handleChangeLanguage()'></i></li>
         </ul>
     </div>
@@ -66,23 +66,23 @@ export default {
                     break;
                 case '/Resume':
                     this.$store.commit('changePage','Resume');
-                    this.$store.commit('changeIntro','It is an introduction/sub-title for download');
+                    this.$store.commit('changeIntro','');
                     break;
                 case '/Experience':
                     this.$store.commit('changePage','Experience');
-                    this.$store.commit('changeIntro','It is an introduction/sub-title for document');
+                    this.$store.commit('changeIntro','');
                     break;
                 case '/Project':
                     this.$store.commit('changePage','Project');
-                    this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                    this.$store.commit('changeIntro','');
                     break;
                 case '/Certification':
                     this.$store.commit('changePage','Certification');
-                    this.$store.commit('changeIntro','It is an introduction/sub-title for download');
+                    this.$store.commit('changeIntro','');
                     break;
                 case '/Blogs':
                     this.$store.commit('changePage','Blogs');
-                    this.$store.commit('changeIntro','It is an introduction/sub-title for document');
+                    this.$store.commit('changeIntro','');
                     break;
             }
     },
@@ -104,27 +104,27 @@ export default {
               case 2:
                   this.$router.push('./Resume#app');
                   this.$store.commit('changePage','Resume');
-                  this.$store.commit('changeIntro','It is an introduction/sub-title for download');
+                  this.$store.commit('changeIntro','');
                   break;
               case 3:
                   this.$router.push('./Experience#app');
                   this.$store.commit('changePage','Experience');
-                  this.$store.commit('changeIntro','It is an introduction/sub-title for document');
+                  this.$store.commit('changeIntro','');
                   break;
               case 4:
                   this.$router.push('./Project#app');
                   this.$store.commit('changePage','Project');
-                  this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                  this.$store.commit('changeIntro','');
                   break;
               case 5:
                   this.$router.push('./Certification#app');
                   this.$store.commit('changePage','Certification');
-                  this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                  this.$store.commit('changeIntro','');
                   break;
               case 6:
                   this.$router.push('./Blogs#app');
                   this.$store.commit('changePage','Blogs');
-                  this.$store.commit('changeIntro','It is an introduction/sub-title for example');
+                  this.$store.commit('changeIntro','');
                   break;
           }
       }
@@ -143,7 +143,7 @@ export default {
     min-width:1400px;
 }
 .fa{
-    margin-left:10px;
+    margin-left:20px;
     margin-top:5px;
     font-size:24px;
     cursor:pointer;
