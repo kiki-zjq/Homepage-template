@@ -10,7 +10,7 @@
       active-text-color="#ff4f4f">
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-menu"></i>
           <span>{{language=='Chinese'?'首页':'HOMEPAGE'}}</span>
         </template>
         <el-menu-item-group>
@@ -21,7 +21,7 @@
       </el-submenu>
 
       <el-menu-item index="2" @click='handleClick(2)'>
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-edit"></i>
         <span slot="title" >{{language=='Chinese'?'简历':'RESUME'}}</span>
       </el-menu-item>
 
@@ -31,12 +31,12 @@
       </el-menu-item>
 
       <el-menu-item index="4" @click='handleClick(4)'>
-        <i class="el-icon-setting"></i>
+        <i class="el-icon-suitcase"></i>
         <span slot="title">{{language=='Chinese'?'项目':'PROJECT'}}</span>
       </el-menu-item>
 
       <el-menu-item index="5" @click='handleClick(5)'>
-        <i class="el-icon-setting"></i>
+        <i class="el-icon-reading"></i>
         <span slot="title">{{language=='Chinese'?'证书':'CERTIFICATION'}}</span>
       </el-menu-item>
 

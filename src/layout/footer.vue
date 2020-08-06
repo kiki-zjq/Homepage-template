@@ -1,52 +1,101 @@
 <template>
     <div class='footer'>
-        
+
+            <el-dialog
+                title="Mail"
+                :visible.sync="dialogMail"
+                width="30%"
+                :before-close="handleClose">
+                <p>zhujiangqi@bupt.edu.cn</p>
+                <i>or</i>
+                <p>zhujiangqi0701@gmail.com</p>
+                <span slot="footer" class="dialog-footer">
+                    <el-button type="primary" @click="dialogMail = false" style='background-color: #404040;'>O K</el-button>
+                </span>
+            </el-dialog>
+
+            <el-dialog
+                title="Phone"
+                :visible.sync="dialogTele"
+                width="30%"
+                :before-close="handleClose">
+                <p>18810701233</p>
+                <span slot="footer" class="dialog-footer">
+                    <el-button type="primary" @click="dialogTele = false" style='background-color: #404040;'>O K</el-button>
+                </span>
+            </el-dialog>
+
+            <el-dialog
+                title="WeChat"
+                :visible.sync="dialogWechat"
+                width="30%"
+                :before-close="handleClose">
+                <p>WeChat Number: <i>zjq990701</i></p>
+                <span slot="footer" class="dialog-footer">
+                    <el-button type="primary" @click="dialogWechat = false" style='background-color: #404040;'>O K</el-button>
+                </span>
+            </el-dialog>
+
             <div class="contact-section-header">
                 <h2>Contact me...</h2>
                 
             </div>
                 <div class="contact-links">
-                    <a
+                    <!-- <a
                     href="#"
                     target="_blank"
                     class="btn contact-details"
-                    ><i class="fa fa-facebook-square fa-2x"></i> <span class='contact-way'>Facebook</span></a>
+                    ><i class="fa fa-facebook-square fa-2x"></i> <span class='contact-way'>Facebook</span></a> -->
 
 
                     <a
                     id="profile-link"
-                    href="#"
+                    href="https://github.com/kiki-zjq"
                     target="_blank"
                     class="btn contact-details"
                     ><i class="fa fa-github fa-2x"></i> <span class='contact-way'>GitHub</span></a>
 
-                    <a
+                    <!-- <a
                         href="#"
                         target="_blank"
                         class="btn contact-details"
-                    ><i class="fa fa-twitter fa-2x"></i> <span class='contact-way'>Twitter</span></a>
+                    ><i class="fa fa-twitter fa-2x"></i> <span class='contact-way'>Twitter</span></a> -->
 
                     <a 
-                        href="#" 
+                        href='javascript:void(0)'
                         class="btn contact-details"
+                        @click='dialogMail = true'
                     ><i class="fa fa-at fa-2x"></i> <span class='contact-way'>Send a mail</span></a>
 
                     <a 
-                        href="#" 
+                        href='javascript:void(0)' 
                         class="btn contact-details"
+                        @click='dialogTele = true'
                     ><i class="fa fa-phone-square fa-2x"></i> <span class='contact-way'>Call me</span></a>
+
+                    <a 
+                        href='javascript:void(0)' 
+                        class="btn contact-details"
+                        @click='dialogWechat = true'
+                    ><i class="fa fa-wechat fa-2x"></i> <span class='contact-way'>WeChat</span></a>
 
                 </div>
             <el-divider></el-divider>
             <div class="copyright">
-                <i class="fa fa-copyright fa-1x" aria-hidden="true"></i><span class='team-name'>KiKi-Zjq</span>
+                <i class="fa fa-at fa-1x" aria-hidden="true"></i><span class='team-name'>KiKi-Zjq</span>
             </div>
     </div>
 </template>
 <script>
 import "font-awesome/css/font-awesome.css"
 export default {
-    
+    data(){
+        return{
+        dialogMail:false,
+        dialogTele:false,
+        dialogWechat:false,
+        }
+    }
 
 }
 </script>

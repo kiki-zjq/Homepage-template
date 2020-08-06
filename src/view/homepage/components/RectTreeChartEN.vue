@@ -67,7 +67,7 @@ export default {
                 },
                 data: [
                     {
-                        name:'前端技能',
+                        name:'Front-End',
                         value:'1500',
                         children:[
                             {
@@ -163,7 +163,7 @@ export default {
                     },
                     //--------------------
                     {
-                        name:'后端技能',
+                        name:'Back-End',
                         value:'1000',
                         children:[
                             {
@@ -179,7 +179,7 @@ export default {
                                         value:'100',
                                     },
                                     {
-                                        name:'python爬虫',
+                                        name:'python crawl',
                                         value:'300',
                                     },
                                     {
@@ -216,11 +216,11 @@ export default {
                     },
                     //--------------------
                     {
-                        name:'数据库',
+                        name:'Database',
                         value:'1000',
                         children:[
                             {
-                                name:'关系型数据库',
+                                name:'Relational Database',
                                 value:'600',
                                 children:[
                                     {
@@ -230,7 +230,7 @@ export default {
                                 ]
                             },
                             {
-                                name:'非关系型数据库',
+                                name:'Non-relational databases',
                                 value:'600',
                                 children:[
                                     {
@@ -243,15 +243,15 @@ export default {
                     },
                     //-------------------
                     {
-                        name:'其他',
+                        name:'Other',
                         value:'1000',
                         children:[
                             {
-                                name:'开发相关 Git',
+                                name:'Git',
                                 value:'400'
                             },
                             {
-                                name:'机器学习 Machine Learning',
+                                name:'Machine Learning',
                                 value:'400'
                             },
                             {
