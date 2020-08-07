@@ -7,7 +7,9 @@
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
-      active-text-color="#ff4f4f">
+      active-text-color="#ff4f4f"
+      >
+      
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-menu"></i>

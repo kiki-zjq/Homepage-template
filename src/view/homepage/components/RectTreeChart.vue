@@ -238,6 +238,10 @@ export default {
                                         value:'600',
                                     }
                                 ]
+                            },
+                            {
+                                name:'Elastic Search',
+                                value:'600',
                             }
                         ]
                     },
