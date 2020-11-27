@@ -72,7 +72,8 @@
         <p style="margin-left:2em;color:gray" v-if='language=="Chinese"'><i>(点击 <b>Semester</b> 或者 <b>Keywords</b> 进行筛选)</i></p>
         <p style="margin-left:2em;color:gray" v-if='language=="English"'><i>(Click <b>Semester</b> or <b>Keywords</b> to filter this table)</i></p>
         <div class="table" style="margin:5px auto;width:95%;">
-           <List />
+           <List v-if='language=="Chinese"'/>
+           <ListEN v-if='language=="English"'/>
         </div>
 
     </div>    
@@ -82,11 +83,13 @@
 import RectTreeChart from './components/RectTreeChart';
 import RectTreeChartEN from './components/RectTreeChartEN';
 import List from './components/List';
+import ListEN from './components/ListEnglish';
 export default {
     components:{
       RectTreeChart,
       RectTreeChartEN,
-      List
+      List,
+      ListEN
     },
     data() {
       return {
