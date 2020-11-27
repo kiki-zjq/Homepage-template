@@ -5,23 +5,55 @@
             {{language=='Chinese'?'关于作者':'About'}}
         </div>
         <div style="margin-left:2em;" v-if='language=="Chinese"'>
-                <p>作者朱江奇，北京邮电大学2017级在读，电信工程及管理专业。绩点92.43/100，目前专业排名第一 （1/326）</p>
-                <p>对计算机科学以及软件工程方向有着浓厚的兴趣，通过自学了解并掌握了部分编程语言。</p>
-                <p>日常喜欢应用新学到的知识做一些小的项目的编写，希望能籍由此巩固知识并提升自己的代码能力。</p>
-                <p>目前有较多科研实习经历，希望能为未来从事相关行业工作夯实基础。</p>
-                <p>最后，本项目是一个从零开始搭建的个人主页。并挂载到了github page上可以从互联网上进行访问。</p>
-                <p>项目搭建在github page上，其中使用到了诸如vue,vue-router,element-ui,e-charts等技术。同时为了解析json文件也进行了axios封装。<b>（由于github-page网站自身的原因，加载图片的时候可能速度较慢）</b></p>
-                <p>本网站后续会继续更新完善填充XD</p>
-                <p>最后！24小时在线求职求实验室求求了QnQ</p>
+                <p><span><b>姓名:</b> 朱江奇</span><span style="margin-left:3em"><b>在读院校:</b> 北京邮电大学</span><span style="margin-left:3em"><b>专业:</b> 电信工程及管理</span></p>
+                <p><span><b>成绩:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
+                <p><b>英语:</b> TOEFL 110 <span style="color:#999;font-weight:bold">( R 30 / L 28 / S 26 / W 26)</span>&nbsp;&nbsp;&nbsp;GRE 328 <span style="color:#999;font-weight:bold">(V 159 / Q 169 / AW 3.0)</span></p>
+                <p>
+                    <b>课程:</b> 线性代数(99)&nbsp;&nbsp;&nbsp;概率论(99)&nbsp;&nbsp;&nbsp;数据结构(94)&nbsp;&nbsp;&nbsp;互联网应用(97)&nbsp;&nbsp;&nbsp;Java高级语言程序设计(95)&nbsp;&nbsp;&nbsp;
+                    <el-tooltip class="item" effect="dark" content="更多" placement="top-start">
+                      <a style="color:black" href="/#/#academic"><i class="el-icon-more"></i></a>
+                    </el-tooltip>
+                </p>
+
+                <p>
+                    <b>荣誉:</b> 2017-2018年国家级奖学金<span style="color:#999;font-weight:bold">&nbsp;( 专业前四 )</span>
+                </p>
+                <p style="padding-left:2em"> &nbsp;&nbsp;2018-2019年国家级奖学金<span style="color:#999;font-weight:bold">&nbsp;( 专业前四 )</span></p>
+                <p style="padding-left:2em"> &nbsp;&nbsp;2020年小米特等奖学金<span style="color:#999;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( 全校前五 )&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <el-tooltip class="item" effect="dark" content="更多" placement="top-start">
+                      <a style="color:black" href="/#/Certification#anchor"><i class="el-icon-more"></i></a>
+                    </el-tooltip>
+                </p>
+   
         </div>
         <div style="margin-left:2em;" v-if='language=="English"'>
-                <p>Jiangqi Zhu, a junior student from Beijing University of Posts and Telecommunications (BUPT).My college major is telecommunications engineering with Management with overall GPA 92.43/100 , <b>ranking 1st among 326</b>. </p>
-                <p> I am very interested in software engineering, data mining and database. At the same time, I like to use programming language to write some simple projects in my daily study. </p>
-                <p> For details about information and projects please check my CV or my Github. </p>
-                <p> Finally, this project is a personal homepage built from scratch.</p><br />
-                <p> This project, which has used vue, vuex, vue-router, axios and many front-end technologies, set up based on github-page.<b>(Some images may be slow to load due to github-page itself)</b></p>
-                <p> This website may have many shortcomings, but I hope that with the growth of my skills I can  further improve it by myself.</p>
-                <p> At last, asking for an opportunity about research in a lab or work as a internship！！QnQ</p>
+                <p><span><b>Name:</b> Jiangqi Zhu</span><span style="margin-left:3em"><b>School:</b> Beijing University of Posts and Telecommunications </span><span style="margin-left:3em"></span></p>
+                <p><b>Major:</b> B.E. in Telecommunications Engineering with Management.</p>
+                <p><span><b>Overall GPA:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
+                <p><b>Language:</b> TOEFL 110 <span style="color:#999;font-weight:bold">( R 30 / L 28 / S 26 / W 26)</span>&nbsp;&nbsp;&nbsp;GRE 328 <span style="color:#999;font-weight:bold">(V 159 / Q 169 / AW 3.0)</span></p>
+                <p>
+                    <b>Related Courses:</b>  Linear Algebra(99)&nbsp;&nbsp;&nbsp;Probability Theory and Stochastic Process(99)&nbsp;&nbsp;&nbsp;Data Structure(94)&nbsp;&nbsp;&nbsp;
+                    
+                </p>
+                <p style="padding-left:8em;">
+                    &nbsp;&nbsp;Internet Applications(97)&nbsp;&nbsp;&nbsp;Java Programming(95)&nbsp;&nbsp;&nbsp;
+                    <el-tooltip class="item" effect="dark" content="More Details" placement="top-start">
+                      <a style="color:black" href="/#/#academic"><i class="el-icon-more"></i></a>
+                    </el-tooltip>
+                </p>
+
+                <p>
+                    <b>Selected Awards:</b> National Scholarships,2017-2018<span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;( Top 4 in the major )</span>
+                </p>
+                <p style="padding-left:8em"> &nbsp;&nbsp;National Scholarships,2018-2019<span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;( Top 4 in the major )</span></p>
+                <p style="padding-left:8em"> &nbsp;&nbsp;Xiaomi Special Level Scholarship in 2020<span style="color:#999;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( Top 5 in the university )&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <el-tooltip class="item" effect="dark" content="More Details" placement="top-start">
+                      <a style="color:black" href="/#/Certification#anchor"><i class="el-icon-more"></i></a>
+                    </el-tooltip>
+                </p>
+
+
+
             </div>
         <el-divider></el-divider>
         <!-------------------------------------------------------------------------------------->

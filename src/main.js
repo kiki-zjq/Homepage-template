@@ -16,7 +16,7 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
   state:{
-      language:'Chinese',
+      language:'English',
       Page:'Homepage',
       Intro:'',
     },

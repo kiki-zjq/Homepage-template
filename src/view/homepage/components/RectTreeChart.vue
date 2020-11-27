@@ -57,7 +57,7 @@ export default {
       const option = {
             series: [{
                 type: 'treemap',
-                leafDepth: 1,
+                leafDepth: 2,
                 visibleMin: 300,
                 roam:'false',
                 label:{

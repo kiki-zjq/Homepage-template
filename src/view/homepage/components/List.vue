@@ -4,6 +4,7 @@
                 max-height="800"
                 :data="tableData"
                 stripe
+                :default-sort = "{prop: 'grade', order: 'descending'}"
                 style="width: 100%">
                 <el-table-column
                 prop="semester"
