@@ -12,7 +12,7 @@
                                         projectName='Machine Learning' :srcList='srcList'/>
                             </el-col>
                             <el-col :span='12'>
-                                <imgShow src='../../static/img/Certification/M001.png' 
+                                <imgShow src='../../static/img/Certification/M001.jpg' 
                                         projectName='MongoDB basic' :srcList='srcList'/>
                             </el-col>
                         </el-row>
@@ -20,7 +20,7 @@
 
                         <el-row gutter="20">
                             <el-col :span='12'>
-                                <imgShow src='../../static/img/Certification/M220JS.png'  
+                                <imgShow src='../../static/img/Certification/M220JS.jpg'  
                                         projectName='MongoDB JS' :srcList='srcList'/>
                             </el-col>
 
@@ -72,8 +72,8 @@ export default {
         url: '',
         srcList: [
           '../../static/img/Certification/Machine Learning.jpg',
-          '../../static/img/Certification/M001.png',
-          '../../static/img/Certification/M220JS.png',
+          '../../static/img/Certification/M001.jpg',
+          '../../static/img/Certification/M220JS.jpg',
           '../../static/img/Certification/Responsive Web Design.png',
           '../../static/img/Certification/Algorithms and Data Structure.png',
           '../../static/img/Certification/Front End Library.png',
