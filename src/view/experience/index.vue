@@ -12,8 +12,8 @@
             <el-radio :label="false">正序</el-radio>
             </el-radio-group>
             <span style='margin-left:3em;font-weight:bold'>筛选:</span><span style='margin-left:5px'></span>
+            <el-checkbox v-model="wor" style='color:#F56C6C;font-weight:bold'>Work</el-checkbox>
             <el-checkbox v-model="lab" style='color:#409EFF;font-weight:bold'>Lab</el-checkbox>
-            <el-checkbox v-model="int" style='color:#F56C6C;font-weight:bold'>Intern</el-checkbox>
             <el-checkbox v-model="pro" style='color:#E6A23C;font-weight:bold'>Project</el-checkbox>
             <el-checkbox v-model="oth" style='color:#67C23A;font-weight:bold'>Other</el-checkbox>
         </div>
@@ -25,8 +25,8 @@
             <el-radio :label="false">Positive</el-radio>
             </el-radio-group>
             <span style='margin-left:3em;font-weight:bold'>Filter:</span><span style='margin-left:5px'></span>
+            <el-checkbox v-model="wor" style='color:#F56C6C;font-weight:bold'>Work</el-checkbox>
             <el-checkbox v-model="lab" style='color:#409EFF;font-weight:bold'>Lab</el-checkbox>
-            <el-checkbox v-model="int" style='color:#F56C6C;font-weight:bold'>Intern</el-checkbox>
             <el-checkbox v-model="pro" style='color:#E6A23C;font-weight:bold'>Project</el-checkbox>
             <el-checkbox v-model="oth" style='color:#67C23A;font-weight:bold'>Other</el-checkbox>
         </div>
@@ -90,9 +90,9 @@
             </el-timeline-item>
 
 
-            <el-timeline-item timestamp="2019-07 to 2019-10" type="danger" placement="top" v-if="int">
+            <el-timeline-item timestamp="2019-07 to 2019-10" type="danger" placement="top" v-if="wor">
                 <el-card>
-                    <Tag type='int'/>
+                    <Tag type='wor'/>
                     <h3 class='activity-title'>字节跳动, 懂车帝部门, 前端实习生 </h3>
                     <div>
                         <p class='sub-activity-title'><b>关键词:</b> Front-end, Vue.js, Element UI, git</p>
@@ -188,7 +188,65 @@
 
         <el-timeline :reverse="reverse" v-if='language=="English"'>
 
-            
+            <el-timeline-item timestamp="2021-08 to 2022-06" type="danger" placement="top" v-if="wor">
+                <el-card>
+                    <Tag type='wor'/>
+                    <h3 class='activity-title'>TikTok, ByteDance Ltd. </h3>
+                    <h3 class='activity-title'><i>Full-time Software Development Engineer</i></h3>
+                    <div>
+                        <p class='sub-activity-title'><b>Key Words:</b> Front-End, Full-Stack, Node.js, React.js, Cross-Platform, To Client, Mobile Application Development</p>
+                        <p class='activity-content'>
+                            In August 2021, I started a full-time job in the TikTok R&D team. In this year's work, my main business is the video playback page. This project is one of the most important projects of the TikTok live broadcast team last year. The purpose is to open up the market of TikTok's medium and long video playback platform.
+                        </p>
+                        <p class='activity-content'>
+                            As a project running on the mobile phone, the page experience developed using JS is generally weaker than that developed using Native. So last year I made a lot of effort and optimization, and finally made the page experience comparable to Native development.
+                        </p>
+                        <el-divider></el-divider>
+                        <p><b>Part of Project Experience:</b></p>
+                        <p><b><i>Tiktok Mobile Application Live Broadcast Product (To Client)</i></b></p>
+                        <ul class='activity-content'>
+                            <li>Led the creation of Video Playback webpage with 2,000,000+ daily Page Views(PV) by cross-platform (Android and IOS) technology based on React.js. With a First Paint Time (FP) of less than 50 ms and a Time to Interactive (TTI) of less than 100 ms, the page usage experience is comparable to native development.</li>
+                            <li>Designed several H5 interactive components with React.js, allows streamers and users to interact with each other. Utilized in six S-Level activities with 30+% interactive rate, and 300,000+ daily Page Views(PV).</li>
+                            <li>Designed and implemented a centralized program distribution page. Increased the viewing volume of programs by 2+% and the repeat viewing rate of viewers by 10+%.</li>
+                            <li>Implemented a general H5 video playback module. Allow non-technical employees to configure H5 pages to generate event posters through a low-code platform. It has been applied to 20+ activities and has 3,000,000+ Page Views.</li>
+                            <li>Innovated optimization of projects and organized the AB experiment. Ultimately lead to a 40% decrease in FP and TTI.</li>
+                            <li>Initiated migration of codebase to monorepo, developers only need to maintain one repository, the code deployment process was 50% faster, and enhance the manpower of 20%.</li>
+                            <li>Organized online Oncall of websites and successfully handled 70+ on-calls totally, with a 100% favorable rate.</li>
+                        </ul>
+    
+                    </div>
+                </el-card>
+            </el-timeline-item>
+
+
+            <el-timeline-item timestamp="2021-04 to 2021-08" type="danger" placement="top" v-if="wor">
+                <el-card>
+                    <Tag type='wor'/>
+                    <h3 class='activity-title'>TikTok, ByteDance Ltd. </h3>
+                    <h3 class='activity-title'><i>Front-End Software Development Engineer Intern</i></h3>
+                    <div>
+                        <p class='sub-activity-title'><b>Key Words:</b> Front-End, Vue.js, Node.js, React.js, To Business</p>
+                        <p class='activity-content'>
+                            In April 2021, I joined the R&D team of TikTok as an intern. During the internship, I was mainly responsible for the research and development of the background management system of the live broadcast team. This is a To Business project, and the main target users are internal employees. Internal employees can modify the display content on the TikTok mobile app by configuring in this platform.
+                        </p>
+                        <p class='activity-content'>
+                            In this project, we chose a more appropriate RPC(Remote Procedure Call) method for data request and rendering. We used React.js to implement Presentation Layer, and Node.js is used to implement Business Layer.
+                        </p>
+                        <el-divider></el-divider>
+                        <p><b>Part of Project Experience:</b></p>
+                        <p><b><i>I Starfish Management Platform Programming (To Business)</i></b></p>
+                        <ul class='activity-content'>
+                            <li>Developed the MIS system based on React.js and Node.js.</li>
+                            <li>Complete 13 product iteration requirements and 3 performance improvement requirements using React.js and Node.js in three months.</li>
+                            <li>Use Node.js's ReadStream module, allows users to configure entries by uploading a CSV form. Enhance the efficiency of operation staff by 25%. Save five or more manpower per week.</li>
+                            <li>Write SOP document, guide code release standard process for new employees.</li>
+                            <li>Initiated an A/B experimentation and recovered experimental data. Optimized user experience.</li>
+                        </ul>
+    
+                    </div>
+                </el-card>
+            </el-timeline-item>
+
             <el-timeline-item timestamp="2020-03 to 2020-11" type="primary" placement="top" v-if="lab">
                 <el-card>
                     <Tag type='lab'/>
@@ -242,10 +300,10 @@
             </el-timeline-item>
 
 
-            <el-timeline-item timestamp="2019-07 to 2019-10" type="danger" placement="top" v-if="int">
+            <el-timeline-item timestamp="2019-07 to 2019-10" type="danger" placement="top" v-if="wor">
                 <el-card>
-                    <Tag type='int'/>
-                    <h3 class='activity-title'>Intern, Front-end Department, ByteDance </h3>
+                    <Tag type='wor'/>
+                    <h3 class='activity-title'>Intern, Front-end Department, ByteDance Ltd. </h3>
                     <div>
                         <p class='sub-activity-title'><b>Key Words:</b> Front-end, Vue.js, Element UI, git</p>
                         <p class='activity-content'>
@@ -343,7 +401,7 @@ export default {
       return {
         reverse: false,
         lab:true,
-        int:true,
+        wor:true,
         pro:true,
         oth:true,
       };

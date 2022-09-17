@@ -10,13 +10,13 @@
             <!-- <a v-if='language=="Chinese"' class='downloader' href='./static/data/SNIS-939.mp4' download='SNIS-939'>
                 <el-button type="warning" icon="el-icon-download" circle></el-button>
             </a> -->
-            <a v-if='language=="English"' class='downloader' href='./static/data/Resume_ZhuJiangqi_english.pdf' download='Resume_ZhuJiangqi.pdf'>
+            <a v-if='language=="English"' class='downloader' href='./static/data/Resume_ZhuJiangqi_english.pdf' download='Resume_JiangqiZhu_SDE.pdf'>
                 <el-button type="success" icon="el-icon-download" circle></el-button>
             </a>
         <div class='resume-content'>
             <img v-if='language=="Chinese"' src="./Resume.jpg" width='800px'/>
             <img v-if='language=="English"' src="./English_1.jpg" width='800px' />
-            <img v-if='language=="English"' src="./English_2.jpg" width='800px' style='margin-top:-100px;'/>
+            <!-- <img v-if='language=="English"' src="./English_2.jpg" width='800px' style='margin-top:-100px;'/> -->
         </div>
 
         <!-- <el-divider></el-divider>

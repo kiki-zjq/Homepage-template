@@ -16,9 +16,9 @@
           <span>{{language=='Chinese'?'首页':'HOMEPAGE'}}</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" @click='handleClick(1.1)'>{{language=='Chinese'?'关于作者':'About'}}</el-menu-item>
+          <el-menu-item index="1-1" @click='handleClick(1.1)'>{{language=='Chinese'?'关于作者':'About Me'}}</el-menu-item>
           <el-menu-item index="1-2" @click='handleClick(1.2)'>{{language=='Chinese'?'相关技术栈':'Skill'}}</el-menu-item>
-          <el-menu-item index="1-3" @click='handleClick(1.3)'>{{language=='Chinese'?'本科成绩单':'Academic'}}</el-menu-item> 
+          <el-menu-item index="1-3" @click='handleClick(1.3)'>{{language=='Chinese'?'本科成绩单':'Transcript'}}</el-menu-item> 
         </el-menu-item-group>
       </el-submenu>
 
@@ -117,18 +117,18 @@ export default {
         switch(index){
             case 1.1:
               this.$router.push('/#anchor');
-              this.$store.commit('changePage','KiKi-Zjq');
-              this.$store.commit('changeIntro','Personal Homepage');
+              this.$store.commit('changePage','Jiangqi (KK) Zhu');
+              this.$store.commit('changeIntro','MS Student @ Carnegie Mellon University | Actively seeking SDE internship opportunities 2023 summer');
               break;
             case 1.2:
               this.$router.push('/#skill');
-              this.$store.commit('changePage','KiKi-Zjq');
-              this.$store.commit('changeIntro','Personal Homepage');
+              this.$store.commit('changePage','Jiangqi (KK) Zhu');
+              this.$store.commit('changeIntro','MS Student @ Carnegie Mellon University | Actively seeking SDE internship opportunities 2023 summer');
               break;
             case 1.3:
               this.$router.push('/#academic');
-              this.$store.commit('changePage','KiKi-Zjq');
-              this.$store.commit('changeIntro','Personal Homepage');
+              this.$store.commit('changePage','Jiangqi (KK) Zhu');
+              this.$store.commit('changeIntro','MS Student @ Carnegie Mellon University | Actively seeking SDE internship opportunities 2023 summer');
               break;
             case 2:
               this.$router.push('/Resume#anchor');

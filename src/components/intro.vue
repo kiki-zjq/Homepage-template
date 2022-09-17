@@ -2,7 +2,8 @@
     <div class="intro-page">
         <div style="width:80%;margin:auto;">
             <span class="main-title">{{Title}}</span><br/>
-            <span class="intro">{{Intro}}</span>
+            <!-- <span class="intro">{{Intro}}</span> -->
+            <span class="intro">MS Student @ Carnegie Mellon University | Actively seeking SDE internship opportunities 2023 summer</span>
         </div>
     </div>
 </template>
@@ -16,8 +17,8 @@ export default {
         },
         Intro:{
             style:String,
-            default:'It is a sub-title',
-        }
+            default:'',
+        },
     },
     computed:{
         Title:function(){
@@ -25,7 +26,7 @@ export default {
         },
         Intro:function(){
             return this.$store.state.Intro
-        }
+        },
     }
 }
 </script>

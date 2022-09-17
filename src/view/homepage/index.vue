@@ -2,55 +2,153 @@
     <div class='document-block'>
         
         <div class='sub-title'>
-            {{language=='Chinese'?'关于作者':'About'}}
+            {{language=='Chinese'?'关于作者':'About Me'}}
         </div>
-        <div style="margin-left:2em;" v-if='language=="Chinese"'>
-                <p><span><b>姓名:</b> 朱江奇</span><span style="margin-left:3em"><b>在读院校:</b> 北京邮电大学</span><span style="margin-left:3em"><b>专业:</b> 电信工程及管理</span></p>
-                <p><span><b>成绩:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
-                <p><b>英语:</b> TOEFL 110 <span style="color:#999;font-weight:bold">( R 30 / L 28 / S 26 / W 26)</span>&nbsp;&nbsp;&nbsp;GRE 328 <span style="color:#999;font-weight:bold">(V 159 / Q 169 / AW 3.0)</span></p>
-                <p>
-                    <b>课程:</b> 线性代数(99)&nbsp;&nbsp;&nbsp;概率论(99)&nbsp;&nbsp;&nbsp;数据结构(94)&nbsp;&nbsp;&nbsp;互联网应用(97)&nbsp;&nbsp;&nbsp;Java高级语言程序设计(95)&nbsp;&nbsp;&nbsp;
-                    <el-tooltip class="item" effect="dark" content="更多" placement="top-start">
-                      <a style="color:black" href="/#/#academic"><i class="el-icon-more"></i></a>
-                    </el-tooltip>
-                </p>
 
-                <p>
-                    <b>荣誉:</b> 2017-2018年国家级奖学金<span style="color:#999;font-weight:bold">&nbsp;( 专业前四 )</span>
-                </p>
-                <p style="padding-left:2em"> &nbsp;&nbsp;2018-2019年国家级奖学金<span style="color:#999;font-weight:bold">&nbsp;( 专业前四 )</span></p>
-                <p style="padding-left:2em"> &nbsp;&nbsp;2020年小米特等奖学金<span style="color:#999;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( 全校前五 )&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <el-tooltip class="item" effect="dark" content="更多" placement="top-start">
-                      <a style="color:black" href="/#/Certification#anchor"><i class="el-icon-more"></i></a>
-                    </el-tooltip>
-                </p>
+        <div style="margin-left:2em;" v-if='language=="Chinese"'>
+            <p><span><b>姓名:</b> 朱江奇</span><span style="margin-left:3em"><b>在读院校:</b> 北京邮电大学</span><span style="margin-left:3em"><b>专业:</b> 电信工程及管理</span></p>
+            <p><span><b>成绩:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
+            <p><b>英语:</b> TOEFL 110 <span style="color:#999;font-weight:bold">( R 30 / L 28 / S 26 / W 26)</span>&nbsp;&nbsp;&nbsp;GRE 328 <span style="color:#999;font-weight:bold">(V 159 / Q 169 / AW 3.0)</span></p>
+            <p>
+                <b>课程:</b> 线性代数(99)&nbsp;&nbsp;&nbsp;概率论(99)&nbsp;&nbsp;&nbsp;数据结构(94)&nbsp;&nbsp;&nbsp;互联网应用(97)&nbsp;&nbsp;&nbsp;Java高级语言程序设计(95)&nbsp;&nbsp;&nbsp;
+                <el-tooltip class="item" effect="dark" content="更多" placement="top-start">
+                    <a style="color:black" href="/#/#academic"><i class="el-icon-more"></i></a>
+                </el-tooltip>
+            </p>
+
+            <p>
+                <b>荣誉:</b> 2017-2018年国家级奖学金<span style="color:#999;font-weight:bold">&nbsp;( 专业前四 )</span>
+            </p>
+            <p style="padding-left:2em"> &nbsp;&nbsp;2018-2019年国家级奖学金<span style="color:#999;font-weight:bold">&nbsp;( 专业前四 )</span></p>
+            <p style="padding-left:2em"> &nbsp;&nbsp;2020年小米特等奖学金<span style="color:#999;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( 全校前五 )&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <el-tooltip class="item" effect="dark" content="更多" placement="top-start">
+                    <a style="color:black" href="/#/Certification#anchor"><i class="el-icon-more"></i></a>
+                </el-tooltip>
+            </p>
    
         </div>
-        <div style="margin-left:2em;" v-if='language=="English"'>
-                <p><span><b>Name:</b> Jiangqi Zhu</span><span style="margin-left:3em"><b>School:</b> Beijing University of Posts and Telecommunications </span><span style="margin-left:3em"></span></p>
-                <p><b>Major:</b> B.E. in Telecommunications Engineering with Management.</p>
-                <p><span><b>Overall GPA:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
-                <p><b>Language:</b> TOEFL 110 <span style="color:#999;font-weight:bold">( R 30 / L 28 / S 26 / W 26)</span>&nbsp;&nbsp;&nbsp;GRE 328 <span style="color:#999;font-weight:bold">(V 159 / Q 169 / AW 3.0)</span></p>
-                <p>
-                    <b>Related Courses:</b>  Linear Algebra(99)&nbsp;&nbsp;&nbsp;Probability Theory and Stochastic Process(99)&nbsp;&nbsp;&nbsp;Data Structure(94)&nbsp;&nbsp;&nbsp;
-                    
-                </p>
-                <p style="padding-left:8em;">
-                    &nbsp;&nbsp;Internet Applications(97)&nbsp;&nbsp;&nbsp;Java Programming(95)&nbsp;&nbsp;&nbsp;
-                    <el-tooltip class="item" effect="dark" content="More Details" placement="top-start">
-                      <a style="color:black" href="/#/#academic"><i class="el-icon-more"></i></a>
-                    </el-tooltip>
-                </p>
 
-                <p>
-                    <b>Selected Awards:</b> National Scholarships,2017-2018<span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;( Top 4 in the major )</span>
-                </p>
-                <p style="padding-left:8em"> &nbsp;&nbsp;National Scholarships,2018-2019<span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;( Top 4 in the major )</span></p>
-                <p style="padding-left:8em"> &nbsp;&nbsp;Xiaomi Special Level Scholarship in 2020<span style="color:#999;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( Top 5 in the university )&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <el-tooltip class="item" effect="dark" content="More Details" placement="top-start">
-                      <a style="color:black" href="/#/Certification#anchor"><i class="el-icon-more"></i></a>
-                    </el-tooltip>
-                </p>
+        <div style="margin-left:2em;" v-if='language=="English"'>
+            <p>
+                <span><b>Name:</b> Jiangqi Zhu</span>
+                <span style="margin-left: 3rem;">
+                    <b>LinkedIn:</b> 
+                    <el-link href=" https://www.linkedin.com/in/jiangqi-kk/" target="_blank"> https://www.linkedin.com/in/jiangqi-kk/</el-link>
+                </span>
+            </p>
+
+            <p>
+                <b>Summer Availability:</b> May.14 2023 - Aug.19 2023
+            </p>
+            
+            <p>
+                <b>Phone Number:</b> (650) 602-4518
+            </p>
+            
+            <p>
+                <b>About:</b>
+                <p>I'm a graduate student at Carnegie Mellon University, majoring in Computer Software Engineering. 
+Currently, I am actively seeking for <b>internship SDE opportunities in 2023 summer</b>.</p>
+
+                <p>In the past year, I worked for TikTok as a full-time software engineer responsible for mobile application development and cross-terminal technology. Therefore, I have a lot of experience in the industrial field and good at teamwork.
+I’m proficient in a variety of software development languages such as JavaScript, Python and Java. I also have experience with databases like MySQL and MongoDB.</p>
+
+                <p>I will be graduating in Dec 2023 and I'm actively seeking for internship SDE opportunities in 2022 summer. Let’s connect: <b>zhujiangqi0701@gmail.com</b> or <b>jiangqiz@andrew.cmu.edu</b></p>
+            </p>
+            <p>
+                <b>Language:</b> TOEFL 110 
+                <span style="color:#999;font-weight:bold">( R 30 / L 28 / S 26 / W 26)</span>
+                &nbsp;&nbsp;&nbsp;GRE 328 <span style="color:#999;font-weight:bold">(V 159 / Q 169 / AW 3.0)</span>
+            </p>
+            
+            <p style = "width: 80%">
+                <el-divider class = 'sub-divider'></el-divider>
+            </p>
+
+            <p class="sub-sub-title">
+                <span><b>Education Experience</b></span>
+            </p>
+            
+            <p>
+                <b>University:</b> Carnegie Mellon University (CMU)
+                <b style = 'margin-left: 3em'>Degree:</b> Master
+            </p>
+            
+            <p>
+                <b>Program: </b> Master of Software Management
+            </p>
+
+            <p>
+                <b>Major: </b> Computer Software Engineering
+            </p>
+
+            <p>
+                <b>Program Start/End Date: </b> 29 AUGUST 2022 - 20 DECEMBER 2023
+            </p>
+            
+            <p style = "width: 80%">
+                <el-divider class = 'sub-divider'></el-divider>
+            </p>
+            
+
+            <p>
+                <b>University:</b> Queen Mary University of London (QMUL)
+                <b style = 'margin-left: 3em'>Degree:</b> Bachelor
+            </p>
+
+
+            <p><b>Major:</b> Telecommunications Engineering with Management</p>
+            <p><span><b>Overall GPA:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
+            <p>
+            <b>Related Courses:</b>  Linear Algebra(99)&nbsp;&nbsp;&nbsp;Probability Theory and Stochastic Process(99)&nbsp;&nbsp;&nbsp;Data Structure(94)&nbsp;&nbsp;&nbsp;
+                
+            </p>
+            <p style="padding-left:8em;">
+                &nbsp;&nbsp;Internet Applications(97)&nbsp;&nbsp;&nbsp;Java Programming(95)&nbsp;&nbsp;&nbsp;
+                <el-tooltip class="item" effect="dark" content="More Details" placement="top-start">
+                  <a style="color:black" href="/#/#academic"><i class="el-icon-more"></i></a>
+                </el-tooltip>
+            </p>
+
+            <p style = "width: 80%">
+                <el-divider class = 'sub-divider'></el-divider>
+            </p>
+
+            <p>
+                <b>Selected Awards:</b> 
+                QMUL Undergraduate College Prize 2021
+                <span style="color:#999;font-weight:bold;padding-left:5em;">&nbsp;&nbsp;(Top 20 in the college)</span>
+            </p>
+
+            <p style="padding-left:8em">
+                 &nbsp;&nbsp;Outstanding Graduates of Beijing in 2021
+                 <span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;(Top 10 in the college)</span>
+            </p>
+
+            <p style="padding-left:8em">
+                 &nbsp;&nbsp;Xiaomi Special Level Scholarship in 2020
+                 <span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;(Top 5 in the university)</span>
+            </p>
+
+            <p style="padding-left:8em"> 
+                 &nbsp;&nbsp;National Scholarships,2018-2019
+                 <span style="color:#999;font-weight:bold;padding-left: 11em">(Top 4 in the major)</span>
+            </p>
+
+            <p style="padding-left:8em"> 
+                 &nbsp;&nbsp;National Scholarships,2017-2018
+                 <span style="color:#999;font-weight:bold;padding-left: 11em">(Top 4 in the major)</span>
+            </p>
+
+            <!-- <p>
+                <b>Selected Awards:</b> National Scholarships in 2019<span style="color:#999;font-weight:bold;padding-left:5em">&nbsp;&nbsp;( Top 4 in the major )</span>
+            </p>
+            
+            <p style="padding-left:8em"> &nbsp;&nbsp;Xiaomi Special Level Scholarship in 2020<span style="color:#999;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( Top 5 in the university )&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <el-tooltip class="item" effect="dark" content="More Details" placement="top-start">
+                    <a style="color:black" href="/#/Certification#anchor"><i class="el-icon-more"></i></a>
+                </el-tooltip>
+            </p> -->
 
 
 
@@ -67,7 +165,7 @@
 
         <!-------------------------------------------------------------------------------------->
         <div class='sub-title' id='academic'>
-            {{language=='Chinese'?'本科成绩单':'Academic'}}
+            {{language=='Chinese'?'本科成绩单':'Undergraduate Transcript'}}
         </div>
         <p style="margin-left:2em;color:gray" v-if='language=="Chinese"'><i>(点击 <b>Semester</b> 或者 <b>Keywords</b> 进行筛选)</i></p>
         <p style="margin-left:2em;color:gray" v-if='language=="English"'><i>(Click <b>Semester</b> or <b>Keywords</b> to filter this table)</i></p>
@@ -129,18 +227,35 @@ export default {
 }
 
 .document-block .sub-title{
-        margin-top:2%;
-        margin-bottom: 2%;
-        padding-left:2em;
-        padding-right:2em;
-        font-weight: bold;
-        font-size:20px;
-        width:fit-content;
-        background-color:#FAFAFA;
-        height:2em;
-        line-height:2em;
-        border-radius:20px;
-    }
+    margin-top:2%;
+    margin-bottom: 2%;
+    padding-left:2em;
+    padding-right:2em;
+    font-weight: bold;
+    font-size:20px;
+    width:fit-content;
+    background-color:#FAFAFA;
+    height:2em;
+    line-height:2em;
+    border-radius:20px;
+}
+
+.document-block .sub-sub-title {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-weight: bold;
+    font-size:16px;
+    width:fit-content;
+    background-color:#FAFAFA;
+    line-height:2em;
+    border-radius:20px;
+}
+
+.sub-divider .el-divider .el-divider--horizontal {
+    width: 80%;
+}
 .module-name{
     font-weight: bold;
     margin-left:2em;

@@ -53,7 +53,7 @@ export default {
     border-top:#E6A23C solid 50px;
     border-right:#E6A23C solid 50px;
 }
-.int{
+.wor{
     background-color: #F56C6C;
     border-top:#F56C6C solid 50px;
     border-right:#F56C6C solid 50px;

@@ -39,7 +39,7 @@
             <li><a href='javascript:void(0)' @click="handleClick(4)">{{language=='Chinese'?'项目':'Project'}}</a></li>
             <li><a href='javascript:void(0)' @click="handleClick(5)">{{language=='Chinese'?'证书':'Certification'}}</a></li>
             <!-- <li><a href='javascript:void(0)' @click="handleClick(6)">{{language=='Chinese'?'博客':'Blogs'}}</a></li> -->
-            <li><i class="fa fa-language" aria-hidden="true" @click='handleChangeLanguage()'></i></li>
+            <!-- <li><i class="fa fa-language" aria-hidden="true" @click='handleChangeLanguage()'></i></li> -->
         </ul>
     </div>
 </template>
@@ -61,8 +61,8 @@ export default {
         console.log("!route:",this.$route)
         switch(this.$route.path){
                 case '/':
-                    this.$store.commit('changePage','KiKi-Zjq');
-                    this.$store.commit('changeIntro','Personal Homepage');
+                    this.$store.commit('changePage','Jiangqi (KK) Zhu');
+                    this.$store.commit('changeIntro','MS Student @ Carnegie Mellon University | Actively seeking SDE internship opportunities 2023 summer');
                     break;
                 case '/Resume':
                     this.$store.commit('changePage','Resume');
@@ -94,12 +94,11 @@ export default {
         },
 
       handleClick(value){
-          console.log(value)
           switch(value){
               case 1:
                   this.$router.push('./#app');
-                  this.$store.commit('changePage','KiKi-Zjq');
-                  this.$store.commit('changeIntro','Personal Homepage');
+                  this.$store.commit('changePage','Jiangqi (KK) Zhu');
+                  this.$store.commit('changeIntro','MS Student @ Carnegie Mellon University | Actively seeking SDE internship opportunities 2023 summer');
                   break;
               case 2:
                   this.$router.push('./Resume#app');

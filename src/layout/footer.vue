@@ -6,7 +6,7 @@
                 :visible.sync="dialogMail"
                 width="30%"
                 :before-close="handleClose">
-                <p>zhujiangqi@bupt.edu.cn</p>
+                <p>jiangqiz@andrew.cmu.edu</p>
                 <i>or</i>
                 <p>zhujiangqi0701@gmail.com</p>
                 <span slot="footer" class="dialog-footer">
@@ -19,7 +19,9 @@
                 :visible.sync="dialogTele"
                 width="30%"
                 :before-close="handleClose">
-                <p>18810701233</p>
+                <p>+1 (650) 602-4518</p>
+                <i>or</i>
+                <p>+86 18810701233</p>
                 <span slot="footer" class="dialog-footer">
                     <el-button type="primary" @click="dialogTele = false" style='background-color: #404040;'>O K</el-button>
                 </span>
