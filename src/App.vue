@@ -91,7 +91,8 @@ body{
 
 .footer{
   margin-top:100px;
-  min-width: 1250px;
+  min-width: 1400px;
+  width: 100%;
 }
 
 

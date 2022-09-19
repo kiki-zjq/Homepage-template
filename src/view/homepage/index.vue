@@ -98,7 +98,7 @@ I’m proficient in a variety of software development languages such as JavaScri
 
 
             <p><b>Major:</b> Telecommunications Engineering with Management</p>
-            <p><span><b>Overall GPA:</b> <i>92.13</i> / 100&nbsp;&nbsp;<i>3.83</i> / 4.0&nbsp;&nbsp;(<i>1</i> / 323 ranking)</span></p>
+            <p><span><b>Overall GPA:</b> <i>91.65</i> / 100&nbsp;&nbsp;<i>3.81</i> / 4.0&nbsp;&nbsp;(<i>3</i> / 323 ranking)</span></p>
             <p>
             <b>Related Courses:</b>  Linear Algebra(99)&nbsp;&nbsp;&nbsp;Probability Theory and Stochastic Process(99)&nbsp;&nbsp;&nbsp;Data Structure(94)&nbsp;&nbsp;&nbsp;
                 
