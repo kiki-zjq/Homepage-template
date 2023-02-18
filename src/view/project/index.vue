@@ -10,8 +10,11 @@
 
                 <el-row gutter="20">
                     <el-col :span='12'>
-                        <imgShow src='../../static/img/1.A Tribute Page.png' 
+                        <!-- <imgShow src='../../static/img/1.A Tribute Page.png' 
                                 href='../../static/project/1.A Tribute Page.html'
+                                projectName='TRIBUTE PAGE' :srcList='srcList'/> -->
+                            <imgShow src='../../static/img/1.A Tribute Page.png' 
+                                href='../../static/project/test.html'
                                 projectName='TRIBUTE PAGE' :srcList='srcList'/>
                     </el-col>
 

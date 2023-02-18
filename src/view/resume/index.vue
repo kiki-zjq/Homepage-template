@@ -50,7 +50,7 @@ export default {
     },
     computed:{
         language:function(){
-            return this.$store.state.language
+            return $store.state.language
         }
     }
 }
